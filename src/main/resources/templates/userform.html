@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="#"
+      th:action="@{/userform}"
+      th:object="${user}"
+      method="post">
+  <p>What is your Name?</p>
+  Name :<input type="text" th:field="*{name}" />
+  <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span><br />
+  <p>What is your Quest?</p>
+  Quest :<input type="text" th:field="*{quest}" />
+  <span th:if="${#fields.hasErrors('quest')}" th:errors="*{quest}"></span><br />
+  <p>What is your favorite color?</p>
+  Color :<input type="text" th:field="*{color}" />
+  <span th:if="${#fields.hasErrors('color')}" th:errors="*{color}"></span><br />
+  <input type="submit" value="Answer" />
+
+</form>
+<img src="https://i.pinimg.com/originals/d9/cf/cb/d9cfcbfba5d99715e07620436197d49d.jpg" width="300px" height="280px">
+
+</body>
+</html>
