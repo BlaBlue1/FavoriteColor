@@ -12,10 +12,7 @@ public class User {
     private String Quest;
 
     @NotNull
-    private String Color;
-
-    @NotNull
-    private float velocity;
+    private String question;
 
 
     public String getName() {
@@ -34,19 +31,11 @@ public class User {
         Quest = quest;
     }
 
-    public String getColor() {
-        return Color;
+    public String getQuestion() {
+        return question;
     }
 
-    public void setColor(String color) {
-        Color = color;
-    }
-
-    public float getVelocity() {
-        return velocity;
-    }
-
-    public void setVelocity(float velocity) {
-        this.velocity = velocity;
+    public void setQuestion(String question) {
+        this.question = question;
     }
 }

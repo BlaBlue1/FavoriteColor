@@ -15,9 +15,9 @@
   <p>What is your Quest?</p>
   Quest :<input type="text" th:field="*{quest}" />
   <span th:if="${#fields.hasErrors('quest')}" th:errors="*{quest}"></span><br />
-  <p>What is your favorite color?</p>
-  Color :<input type="text" th:field="*{color}" />
-  <span th:if="${#fields.hasErrors('color')}" th:errors="*{color}"></span><br />
+  <p th:text="${question}"></p>
+  <input type="text" th:field="*{question}" />
+  <span th:if="${#fields.hasErrors('question')}" th:errors="*{question}"></span><br />
   <input type="submit" value="Answer" />
 
 </form>
